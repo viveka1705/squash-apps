@@ -1,7 +1,6 @@
 
 window.onload = function() {
 
-    // hide the form_2, form_3, form_4
     let form_2  = document.getElementById('form-2');
     form_2.classList.add('form-1-disable');
 
@@ -11,26 +10,6 @@ window.onload = function() {
     let form_4  = document.getElementById('form-4');
     form_4.classList.add('form-1-disable');
 }    
-
-
-// function validation(currentForm, nextForm, nextTab){
-
-
-//     // let form_1 = document.getElementById(currentForm);
-//     // console.log('form_1', form_1.classList)
-//     // form_1.classList.forEach(x => { if (x === 'form_enable') { form_1.classList.remove('form_enable'); form_1.classList.add('form-1-disable')} else { form_1.classList.add('form-1-disable')} })
-//     // form_1.classList.add('form-1-disable')
-
-
-//     // let company_details_tab = document.getElementById(nextTab);
-//     // company_details_tab.classList.add('active');
-
-
-//     // let form_2  = document.getElementById(nextForm);
-//     // form_2.classList.remove('form-1-disable')
-        
-//     // return true;
-// }
 
 
 function back(backForm, currentForm) {
@@ -51,7 +30,6 @@ function validation(currentForm, nextForm, nextTab){
         document.getElementById('efname').innerHTML=""
         localStorage.setItem("tname",tname)
     
-        
         let tphone=document.getElementById("phone").value
         if (!tphone.length){
             document.getElementById('ephone').innerHTML="please enter your phone number"
@@ -59,7 +37,7 @@ function validation(currentForm, nextForm, nextTab){
     
         }
         console.log('t',tphone)
-    
+        document.getElementById('ephone').innerHTML=""
         localStorage.setItem("tphone",tphone)
 
     } else if (currentForm === 'form-2') {
@@ -72,7 +50,7 @@ function validation(currentForm, nextForm, nextTab){
     
         }
         console.log('t',tcname)
-    
+        document.getElementById('ecname').innerHTML=""
         localStorage.setItem("tcname",tcname)
     
         let temail=document.getElementById("email").value
@@ -82,7 +60,7 @@ function validation(currentForm, nextForm, nextTab){
     
         }
         console.log('t',temail)
-    
+        document.getElementById('eemail').innerHTML=""
         localStorage.setItem("temail",temail)
     
         let tjob=document.getElementById("job").value
@@ -92,7 +70,7 @@ function validation(currentForm, nextForm, nextTab){
     
         }
         console.log('t',tjob)
-    
+        document.getElementById('ejob').innerHTML=""
         localStorage.setItem("tjob",tjob)
     
         let tyear=document.getElementById("year").value
@@ -102,10 +80,8 @@ function validation(currentForm, nextForm, nextTab){
     
         }
         console.log('t',tyear)
-    
+        document.getElementById('eyear').innerHTML=""
         localStorage.setItem("tyear",tyear)
-    
-        
     }
     
     
